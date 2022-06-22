@@ -1,0 +1,7 @@
+---
+- name : adding new user
+  user:
+    name: {{ name }}
+    password: "{{ 'Abc123' | password_hash('sha512') }}"
+    groups: wheel
+    home: /home/{{ name }}
